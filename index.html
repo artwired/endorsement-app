@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>We Are The Champions</title>
+  </head>
+  <body>
+    <div id="app-wrapper">
+      <img
+        id="freddie-img"
+        src="assets/freddie.png"
+        alt="silouhette image of Freddie Mercury from Queen holding a mic stand and raising his right fist straight up in the air"
+      />
+      <h1 id="app-title">We are the Champions</h1>
+      <textarea
+        id="main-comment-input-box"
+        cols="30"
+        rows="10"
+        placeholder="Write your endorsement here"
+      ></textarea>
+      <div id="input-field-wrapper">
+        <input
+          type="text"
+          id="from-input-field"
+          class="input-field-styles"
+          placeholder="From"
+        />
+        <input
+          type="text"
+          id="to-input-field"
+          class="input-field-styles"
+          placeholder="To"
+        />
+      </div>
+      <button id="publish-btn">Publish</button>
+      <div id="warning"></div>
+      <h2 id="endorsements-heading">- Endorsements -</h2>
+      <div id="endorsements"></div>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

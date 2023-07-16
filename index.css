@@ -1,0 +1,129 @@
+/* Josh Comeau CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  max-width: 390px;
+  margin: 0 auto;
+  background: #1b1924;
+  font-family: "Inter", sans-serif;
+}
+#app-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 37px;
+  margin-top: 13px;
+}
+#freddie-img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 17px;
+}
+#app-title {
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 19px;
+}
+#main-comment-input-box {
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  background: #444059;
+  color: #8f8f8f;
+  border: none;
+  resize: none;
+  width: 317px;
+  height: 118px;
+  padding: 12px 19px;
+  margin-bottom: 9px;
+}
+#main-comment-input-box:focus {
+  outline: none;
+}
+#input-field-wrapper {
+  display: flex;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+.input-field-styles {
+  border-radius: 8px;
+  background: #444059;
+  text-align: center;
+  border: none;
+  color: #8f8f8f;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+}
+#publish-btn {
+  border-radius: 8px;
+  background: #28a9f1;
+  color: #04131c;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  width: 317px;
+  height: 61px;
+  margin-bottom: 24px;
+}
+#endorsements-heading {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  margin-bottom: 19px;
+}
+#endorsements {
+  width: 100%;
+}
+#endorsements p {
+  background: #fff;
+  margin-bottom: 13px;
+  padding: 11px 15px 11px 15px;
+  font-size: 12px;
+  font-weight: 400px;
+  font-family: "Inter", sans-serif;
+  line-height: 1.25;
+}
+#endorsements #no-comments {
+  border-radius: 8px;
+  background: #444059;
+  color: #8f8f8f;
+  text-align: center;
+}
+#endorsements .endorsement-text {
+  padding-left: 0;
+  padding-bottom: 0;
+}
+.bold-text {
+  font-weight: bold;
+}
