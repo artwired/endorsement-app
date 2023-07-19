@@ -65,7 +65,8 @@ body {
   padding: 12px 19px;
   margin-bottom: 9px;
 }
-#main-comment-input-box:focus {
+#main-comment-input-box:focus,
+.input-field-styles:focus {
   outline: none;
 }
 #input-field-wrapper {
@@ -94,6 +95,7 @@ body {
   width: 317px;
   height: 61px;
   margin-bottom: 24px;
+  cursor: pointer;
 }
 #endorsements-heading {
   font-size: 20px;
@@ -126,4 +128,13 @@ body {
 }
 .bold-text {
   font-weight: bold;
+}
+#post-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.likes-counter {
+  color: #000;
+}
+#likes-count {
 }

@@ -25,7 +25,7 @@ publishBtn.addEventListener("click", () => {
   let addToInput = toInputEl.value;
   let addFromInput = fromInputEl.value;
   let addValue = commentInputEl.value;
-  if (addValue === "") {
+  if (addValue === "" || addToInput === "" || addFromInput === "") {
     clearInputField();
   } else {
     push(endorsementsInDB, {
@@ -33,7 +33,6 @@ publishBtn.addEventListener("click", () => {
       toInput: addToInput,
       fromInput: addFromInput,
     });
-    // push(endorsementsInDB, addValue);
     clearInputField();
     clearFromToInputs();
   }
@@ -45,10 +44,7 @@ onValue(endorsementsInDB, (snapshot) => {
     clearEndorsementsEl();
     for (let i = 0; i < commentsArray.length; i++) {
       let currentEndorsement = commentsArray[i];
-      //   let currentEndorsementID = currentEndorsement[0];
-      //   let currentEndorsementValue = currentEndorsement[1];
       appendEndorsement(currentEndorsement);
-      console.log(currentEndorsement);
     }
   } else {
     endorsementsEl.innerHTML =
@@ -57,6 +53,8 @@ onValue(endorsementsInDB, (snapshot) => {
 });
 function clearInputField() {
   commentInputEl.value = "";
+  toInputEl.value = "";
+  fromInputEl.value = "";
 }
 function clearEndorsementsEl() {
   endorsementsEl.innerHTML = "";
@@ -65,16 +63,27 @@ function clearFromToInputs() {
   toInputEl.value = "";
   fromInputEl.value = "";
 }
+
 function appendEndorsement(endorsementEntry) {
   let endorsementID = endorsementEntry[0];
   let endorsementValue = endorsementEntry[1].comment;
   let endorsementFrom = endorsementEntry[1].fromInput;
   let endorsementTo = endorsementEntry[1].toInput;
   let newComment = document.createElement("p");
+
   newComment.innerHTML = `
   <span class="bold-text">To: ${endorsementTo}</span>
   <p class="endorsement-text">${endorsementValue}</p>
+  <div id="post-footer">
   <span class="bold-text">From: ${endorsementFrom}</span>
+  <span class="likes-counter"><span class="likes-count">0</span> ❤️</span>
+  </div>
   `;
   endorsementsEl.append(newComment);
+  const likesCountEl = document.querySelector(".likes-count");
+  let likesCount = 0;
+  likesCountEl.addEventListener("click", function () {
+    likesCount += 1;
+  });
+  likesCountEl.textContent = likesCount;
 }
